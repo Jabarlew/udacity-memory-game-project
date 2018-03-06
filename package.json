@@ -1,0 +1,25 @@
+{
+  "name": "udacity-memory-game-project",
+  "version": "1.0.0",
+  "description": "second project made for udacity",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jabarlew/udacity-memory-game-project.git"
+  },
+  "keywords": [],
+  "author": "Bartosz Lewandowski <barlewdesign@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jabarlew/udacity-memory-game-project/issues"
+  },
+  "homepage": "https://github.com/Jabarlew/udacity-memory-game-project#readme",
+  "devDependencies": {
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
