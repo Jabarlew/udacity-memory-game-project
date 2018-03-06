@@ -3,6 +3,7 @@
 const path = require('path');
 
 module.exports = {
+    devtool: 'eval-source-map',
     context: path.resolve('src'),
     entry: './index.js',
     output: {
