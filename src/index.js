@@ -1,3 +1,5 @@
 'use strict';
 
-console.log('REAL HOUSE MUSIC');
+const double = require('./double');
+
+console.log(double(7));
