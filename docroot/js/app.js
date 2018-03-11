@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
     ///creates path to images from array of images
     .map(fileName => `img/${fileName}`);
-
+  //keep track of active selections
+  let selectedCards = [];
 
   function startGame() {
     ///Duplicate and shuffle card images
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //creates array from node list.
     const cards = Array.from(document.querySelectorAll('.board > li'))
 
-    ///maps through array and create objects
+      ///maps through array and create objects
       .map((li, i) => ({
         element: li,
         img: cardImages[i],
@@ -36,7 +37,23 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = card.img;
 
       card.element.addEventListener('click', () => {
+        if (selectedCards.length === 2) {
+          if (selectedCards[0].img === selectedCards[1].img) {
+            card.element.classList.add('selected-correct');
+
+          } else {
+            const unselect = selectedCards.slice();
+            setTimeout(() => {
+              unselect.forEach((card) => {
+                card.element.classList.remove('selected');
+              });
+            }, 2000);
+          }
+          selectedCards= [];
+        }
         card.element.classList.add('selected');
+        selectedCards.push(card);
+
       });
     });
   };
