@@ -54,10 +54,14 @@ body {
   border: 0;
   background-color: none;
 }
-
-.selected img {
+img {
   opacity: 0;
 }
+.selected img {
+  opacity: 1;
+}
+
+.
 
 .selected-correct {
   opacity: 0;
