@@ -46,7 +46,19 @@ body {
   font-size: 0em;
 }
 
+.board li {
+  list-style: none;
+}
 
-.opened {
-  font-size: 3em;
+.board button {
+  border: 0;
+  background-color: none;
+}
+
+.selected img {
+  opacity: 0;
+}
+
+.selected-correct {
+  opacity: 0;
 }
