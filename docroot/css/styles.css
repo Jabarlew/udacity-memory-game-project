@@ -30,37 +30,103 @@ body {
   align-items: center;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 5px 7px 30px 0px #000000;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
 .item {
   width: 150px;
   height: 150px;
   margin: 10px;
-  background-color: #ff7675;
+  background-color: #02b3e4;
   cursor: pointer;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0em;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
-.board li {
-  list-style: none;
+.opened button {
+	transform: rotateY(0);
+	background: #fff;
+	cursor: default;
+	animation-name: flip-card;
+	backface-visibility: visible;
+	animation-duration: .75s;
 }
 
-.board button {
-  border: 0;
-  background-color: none;
-}
 img {
   opacity: 0;
 }
-.selected img {
+
+.opened img {
   opacity: 1;
 }
 
-.selected-correct {
-  opacity: 0;
+.open .disabled button {
+	pointer-events: none;
+	opacity: 0.9;
 }
+
+li {
+  list-style: none;
+}
+
+
+@keyframes rubberBand {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, .95, 1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes flip-card {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		transform: perspective(400px);
+	}
+}
+
+

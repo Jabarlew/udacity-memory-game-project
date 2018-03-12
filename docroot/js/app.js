@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ///creates path to images from array of images
     .map(fileName => `img/${fileName}`);
   //keep track of active selections
+
   let selectedCards = [];
 
   function startGame() {
@@ -37,23 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = card.img;
 
       card.element.addEventListener('click', () => {
-        if (selectedCards.length === 2) {
-          if (selectedCards[0].img === selectedCards[1].img) {
-            card.element.classList.add('selected-correct');
-
-          } else {
-            const unselect = selectedCards.slice();
-            setTimeout(() => {
-              unselect.forEach((card) => {
-                card.element.classList.remove('selected');
-              });
-            }, 2000);
-          }
-          selectedCards= [];
-        }
-        card.element.classList.add('selected');
         selectedCards.push(card);
-
+        card.element.classList.add('opened')
+        console.log(selectedCards);
+        if (selectedCards.length === 2) {
+          if (selectedCards[0].img=== selectedCards[1].img) {
+            card.element.classList.add('disabled');
+            selectedCards =[];
+          } else {
+            setTimeout(function(){
+              selectedCards.forEach((card) => {
+                card.element.classList.remove('opened');
+                selectedCards =[];
+            })
+            }, 1300);
+          }
+        } if (selectedCards >= 2) {
+          selectedCards =[];
+        }
       });
     });
   };
