@@ -42,19 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
         card.element.classList.add('opened')
         console.log(selectedCards);
         if (selectedCards.length === 2) {
-          if (selectedCards[0].img=== selectedCards[1].img) {
+          if (selectedCards[0].img === selectedCards[1].img) {
             card.element.classList.add('disabled');
-            selectedCards =[];
+            selectedCards = [];
           } else {
-            setTimeout(function(){
-              selectedCards.forEach((card) => {
-                card.element.classList.remove('opened');
-                selectedCards =[];
-            })
-            }, 1300);
+            setTimeout(unselectCards, 1100);
           }
-        } if (selectedCards >= 2) {
-          selectedCards =[];
+        }
+        if (selectedCards >= 2) {
+          selectedCards = [];
         }
       });
     });
@@ -65,8 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
+  function unselectCards() {
+    selectedCards.forEach((card) => {
+      card.element.classList.remove('opened');
+    });
+    selectedCards = [];
+  };
 
 
 
