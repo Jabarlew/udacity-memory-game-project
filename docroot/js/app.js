@@ -1,6 +1,7 @@
 //ALWAYS ON START
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
+  let numberOfMoves = 0;
   ///array of images
   const availableCardImages = [
       'bear.png',
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedCards.length < 2 && card.element.classList.contains('opened') === false) {
           selectedCards.push(card);
           card.element.classList.add('opened')
-          console.log(selectedCards); ///remove later
+          movesCounter();
           if (selectedCards.length === 2) {
             if (selectedCards[0].img === selectedCards[1].img) {
               card.element.classList.add('disabled');
@@ -62,33 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
+function movesCounter () {
+  if (selectedCards.length === 2) {
+    numberOfMoves++
+  }
+};
 
 function openCards() {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  function unselectCards() {
+function unselectCards() {
   selectedCards.forEach((card) => {
       card.element.classList.remove('opened');
     });
