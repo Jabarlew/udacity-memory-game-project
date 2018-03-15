@@ -44,40 +44,42 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  transition: all 0.6s ease;
 }
 
 .opened button {
 	transform: rotateY(0);
 	background: #fff;
 	cursor: default;
-	animation-name: flip-card;
-	backface-visibility: visible;
-	animation-duration: .75s;
+	transform: rotateY(180deg);
 }
 
 img {
   opacity: 0;
+  width: 70%;
 }
 
 .opened img {
   opacity: 1;
 }
 
-.open .disabled button {
+.opened .disabled button {
 	pointer-events: none;
 }
 
 .wrong-card {
-
   /* css tricks */
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
   perspective: 1000px;
 }
 
 .wrong-card .item {
   background-color: red;
+}
+
+.matched {
+  animation: rotate 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
 
 li {
@@ -102,31 +104,15 @@ li {
     transform: translate3d(4px, 0, 0);
   }
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
 
-@keyframes flip-card {
-	from {
-		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-		animation-timing-function: ease-in;
-		opacity: 0;
-	}
-
-	40% {
-		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-		animation-timing-function: ease-in;
-	}
-
-	60% {
-		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-		opacity: 1;
-	}
-
-	80% {
-		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-	}
-
-	to {
-		transform: perspective(400px);
-	}
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
 
 
