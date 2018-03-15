@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js"></script>
-    <script src="js/app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
 
     <title>Memory Game</title>
 </head>
@@ -18,11 +18,12 @@
   </header>
   <main>
     <div class="flex-container">
-      <h1 class="score-moves-counter">0 Moves</h1>
-      <div class="reset">RESET</div>
+      <h1><span class="moves-counter">0</span> Moves</h1>
+      <h1 class="timer"></h1>
+      <div class="reset"><button>RESET</button></div>
     </div>
       <ul class="board" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
-        <li>
+        <li class="opened">
           <button class="item">
             <img src="img/giraffe.png" alt="Placeholder image">
           </button>
