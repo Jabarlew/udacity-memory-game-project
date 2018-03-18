@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.element.classList.remove('wrong');
           if (selectedCards.length === 2) {
             numberOfMoves++;
+            grade();
             startTimer();
             h1moves.innerHTML = numberOfMoves;
             if (selectedCards[0].img === selectedCards[1].img) {
@@ -67,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
   startGame();
 
   function unselectCards() {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function timer() {
     interval = setInterval(function () {
-      time.innerHTML = hours + ' : ' + minutes + ' : ' + seconds;
+      time.innerHTML = hours + ' h ' + minutes + ' m ' + seconds + ' s';
       seconds++;
       if (seconds === 60) {
         minutes++;
@@ -114,5 +114,17 @@ document.addEventListener('DOMContentLoaded', () => {
       minutes = 0;
       timer();
     }
+  }
+
+  function grade() {
+    const starOne = document.querySelector('.grade-star-one');
+    const starTwo = document.querySelector('.grade-star-two');
+
+    if (numberOfMoves >= 14){
+      starOne.classList.remove('fas');
+      starOne.classList.add('far');
+    } if (numberOfMoves >=17)
+    starTwo.classList.remove('fas');
+    starTwo.classList.add('far');
   }
 });

@@ -8,6 +8,7 @@ body {
   flex-wrap: wrap;
   font-size: 10px;
   font-family: "Playfair Display", serif;
+  letter-spacing: .1rem;
 }
 
 .game-name {
@@ -27,6 +28,9 @@ body {
   flex-basis: 100%;
   width: 100%;
   color: #fff;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: .1rem;
+
 }
 
 
