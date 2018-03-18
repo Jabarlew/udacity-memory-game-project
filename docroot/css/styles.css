@@ -1,16 +1,23 @@
 body {
-  background-color: #fff;
+  background-color: #a8d0e6;
   width: 100%;
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+  font-size: 10px;
+  font-family: "Playfair Display", serif;
 }
 
 .game-name {
   text-align: center;
   flex-basis: 100%;
+  color: #fff;
+  font-size: 2.5rem;
+}
+.grade {
+  font-size: 1.5rem;
 }
 
 .flex-container {
@@ -19,11 +26,14 @@ body {
   align-items: center;
   flex-basis: 100%;
   width: 100%;
+  color: #fff;
 }
+
+
 
 .board {
   max-width: 680px;
-  background-color: #6c5ce7;
+  background-color: #24305e;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,7 +47,7 @@ body {
   width: 150px;
   height: 150px;
   margin: 10px;
-  background-color: #02b3e4;
+  background-color: #374785;
   cursor: pointer;
   border-radius: 10px;
   display: flex;
@@ -75,11 +85,15 @@ img {
 }
 
 .wrong-card .item {
-  background-color: red;
+  background-color: #f76c6c;
 }
 
 .matched {
   animation: rotate 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.matched .item {
+  background-color: #f8e9a1;
 }
 
 li {

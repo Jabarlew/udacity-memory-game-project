@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const h1moves = document.querySelector('.moves-counter');
   const time = document.querySelector('.timer');
+  let win = document.querySelectorAll('.matched');
   let hours = 0;
   let minutes = 0;
   let seconds = 0;
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function timer() {
     interval = setInterval(function () {
-      time.innerHTML = hours + 'h ' + minutes + 'min ' + seconds + 'sec.';
+      time.innerHTML = hours + ' : ' + minutes + ' : ' + seconds;
       seconds++;
       if (seconds === 60) {
         minutes++;
@@ -103,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hours++;
         minutes = 0;
       }
-
     }, 1000);
   }
 
