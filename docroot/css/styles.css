@@ -1,5 +1,5 @@
 body {
-  background-color: #a8d0e6;
+  background-color: #45aaf2;
   width: 100%;
   display:flex;
   align-items: center;
@@ -37,7 +37,7 @@ body {
 
 .board {
   max-width: 680px;
-  background-color: #24305e;
+  background-color: #4b6584;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,7 +51,7 @@ body {
   width: 150px;
   height: 150px;
   margin: 10px;
-  background-color: #374785;
+  background-color: #fed330;
   cursor: pointer;
   border-radius: 10px;
   display: flex;
@@ -89,7 +89,7 @@ img {
 }
 
 .wrong-card .item {
-  background-color: #f76c6c;
+  background-color: #eb3b5a;
 }
 
 .matched {
@@ -97,7 +97,7 @@ img {
 }
 
 .matched .item {
-  background-color: #f8e9a1;
+  background-color: #20bf6b;
 }
 
 li {
@@ -131,6 +131,59 @@ li {
     transform: rotate(360deg);
   }
 }
+
+.win .screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(56, 103, 214, .9);
+}
+
+.win .screen .message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 35%;
+  width: 35%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  text-align: center;
+  font-size: .7rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.message-text {
+  margin-top: 1.5rem;
+  color: #4b6584;
+}
+
+.win .image {
+  background-image: url("/img/flat-green.png");
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  height: 70%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8854d0;
+  font-size: 1.2rem;
+}
+
+/* .hide {
+  display: none;
+} */
+
+
 
 
 
