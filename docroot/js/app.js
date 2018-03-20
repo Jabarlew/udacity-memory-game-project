@@ -120,11 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const starOne = document.querySelector('.grade-star-one');
     const starTwo = document.querySelector('.grade-star-two');
 
-    if (numberOfMoves >= 14) {
+    if (numberOfMoves === 14) {
       starOne.classList.remove('fas');
       starOne.classList.add('far');
     }
-    if (numberOfMoves >= 17) {
+    if (numberOfMoves === 17) {
       starTwo.classList.remove('fas');
       starTwo.classList.add('far');
     }
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       clearInterval(interval);
       hide.classList.remove('hide');
       document.body.classList.add('win');
-      endText.innerHTML = 'You made ' + numberOfMoves + ' moves in ' + hours + ':' + minutes + ':' + seconds;
+      endText.innerHTML = 'You made ' + numberOfMoves + ' moves. Your time is ' + hours + ' h ' + minutes + ' m ' + seconds + ' s ';
     }
 
   }

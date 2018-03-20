@@ -10,13 +10,13 @@ body {
   font-family: "Playfair Display", serif;
   letter-spacing: .1rem;
 }
-
-.game-name {
-  text-align: center;
-  flex-basis: 100%;
-  color: #fff;
-  font-size: 2.5rem;
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+
 .grade {
   font-size: 1.5rem;
 }
@@ -81,7 +81,7 @@ body {
 	transform: rotateY(180deg);
 }
 
-img {
+.item img {
   opacity: 0;
   width: 70%;
 }
