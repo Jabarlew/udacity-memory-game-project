@@ -19,7 +19,7 @@
 <body>
   <header>
     <div class="logo">
-      <img src="img/memory.svg" alt="memory-game">
+      <img src="img/memory.png" alt="memory-game-logo">
     </div>
     <div class="screen hide">
       <div class="message">
@@ -36,14 +36,22 @@
   <main>
     <div class="flex-container">
       <div class="grade">
-        <span><i class=" grade-star-three fas fa-star"></i></span>
-        <span><i class="grade-star-two fas fa-star"></i></span>
-        <span><i class="grade-star-one fas fa-star"></i></span>
+        <span>
+          <i class=" grade-star-three fas fa-star"></i>
+        </span>
+        <span>
+          <i class="grade-star-two fas fa-star"></i>
+        </span>
+        <span>
+          <i class="grade-star-one fas fa-star"></i>
+        </span>
       </div>
       <h1>
         <span class="moves-counter">0</span> Move(s)</h1>
       <h1 class="timer">0 h 0 m 0 s</h1>
-      <button class="reset" onclick="history.go(0)"><i class="fas fa-redo"></i></button>
+      <button class="reset" onclick="history.go(0)">
+        <i class="fas fa-redo"></i>
+      </button>
     </div>
     <ul class="board" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
       <li>

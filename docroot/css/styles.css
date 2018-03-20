@@ -17,6 +17,9 @@ body {
   width: 100%;
 }
 
+.logo img {
+  width: 20%;
+}
 .grade {
   font-size: 1.5rem;
 }
