@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const h1moves = document.querySelector('.moves-counter');
   const time = document.querySelector('.timer');
-  let win = document.querySelectorAll('.matched');
   let hours = 0;
   let minutes = 0;
   let seconds = 0;
@@ -82,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selectedCards.forEach((card) => {
       card.element.classList.add('disabled');
       card.element.classList.add('matched');
+      endGame();
     });
     selectedCards = [];
   }
@@ -120,11 +120,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const starOne = document.querySelector('.grade-star-one');
     const starTwo = document.querySelector('.grade-star-two');
 
-    if (numberOfMoves >= 14){
+    if (numberOfMoves >= 14) {
       starOne.classList.remove('fas');
       starOne.classList.add('far');
-    } if (numberOfMoves >=17)
-    starTwo.classList.remove('fas');
-    starTwo.classList.add('far');
+    }
+    if (numberOfMoves >= 17) {
+      starTwo.classList.remove('fas');
+      starTwo.classList.add('far');
+    }
   }
+
+  function endGame() {
+    let win = document.querySelectorAll('.matched');
+    const endText = document.querySelector('.message-text');
+    const hide = document.querySelector('.screen');
+    if (win.length === 16) {
+      clearInterval(interval);
+      hide.classList.remove('hide');
+      document.body.classList.add('win');
+      endText.innerHTML = 'You made ' + numberOfMoves + ' moves in ' + hours + ':' + minutes + ':' + seconds;
+    }
+
+  }
+
 });

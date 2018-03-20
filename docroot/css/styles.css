@@ -30,9 +30,22 @@ body {
   color: #fff;
   font-family: "Oswald", sans-serif;
   letter-spacing: .1rem;
-
 }
 
+.reset {
+  border: none;
+  background: transparent;
+  color: #4b6584;
+  /* height: 2.5rem; */
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all 0.6s ease;
+}
+
+.reset:hover {
+  color: #fff;
+  transform: rotate(360deg);
+}
 
 
 .board {
@@ -104,6 +117,74 @@ li {
   list-style: none;
 }
 
+.win .screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: rgba(56, 103, 214, .9);
+  z-index: 1;
+}
+
+.win .screen .message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40%;
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  text-align: center;
+  font-size: .7rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.win .message-text {
+  margin-top: 5%;
+  color: #4b6584;
+}
+
+.win .image {
+  background-image: url("/img/flat-green.png");
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  height: 70%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8854d0;
+  font-size: 1.2rem;
+}
+
+.image-text-button button {
+  border: 2px solid #4b6584;
+  background: transparent;
+  color: #4b6584;
+  height: 2.5rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all 0.6s ease;
+}
+
+.image-text-button button:hover {
+  background-color: #fff;
+  color: #B4CCB8;
+  border: 2px solid #fff;
+}
+
+.hide {
+  display: none;
+}
+
 /* css tricks */
 @keyframes shake {
   10%, 90% {
@@ -132,56 +213,7 @@ li {
   }
 }
 
-.win .screen {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%;
-  background-color: rgba(56, 103, 214, .9);
-}
 
-.win .screen .message {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 35%;
-  width: 35%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-  text-align: center;
-  font-size: .7rem;
-  font-family: "Oswald", sans-serif;
-}
-
-.message-text {
-  margin-top: 1.5rem;
-  color: #4b6584;
-}
-
-.win .image {
-  background-image: url("/img/flat-green.png");
-  background-repeat: repeat;
-  top: 0;
-  left: 0;
-  height: 70%;
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #8854d0;
-  font-size: 1.2rem;
-}
-
-/* .hide {
-  display: none;
-} */
 
 
 

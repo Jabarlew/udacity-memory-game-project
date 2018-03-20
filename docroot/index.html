@@ -16,7 +16,7 @@
   <title>Memory Game</title>
 </head>
 
-<body class="win">
+<body>
   <header>
     <h1 class="game-name">
       Memory Game
@@ -24,9 +24,12 @@
     <div class="screen hide">
       <div class="message">
         <div class="image">
-          <h1>YOU WIN!</h1>
+          <div class="image-text-button">
+            <h1>YOU WIN!</h1>
+            <button onclick="history.go(0)">Play Again</button>
+          </div>
         </div>
-        <h1 class="message-text">You made 13 moves in 33 secs and get 3 <span><i class=" grade-star-three fas fa-star"></i></span></h1>
+        <h1 class="message-text"></h1>
       </div>
     </div>
   </header>
@@ -40,7 +43,7 @@
       <h1>
         <span class="moves-counter">0</span> Move(s)</h1>
       <h1 class="timer">0 h 0 m 0 s</h1>
-      <button class="reset">RESET</button>
+      <button class="reset" onclick="history.go(0)"><i class="fas fa-redo"></i></button>
     </div>
     <ul class="board" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
       <li>
