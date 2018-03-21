@@ -1,5 +1,4 @@
 # udacity-memory-game-project
-second project made for udacity
 Second project made for udacity Simple game that I remember from my childhood. Sixteen cards with animal graphic on it.
 
 <a href="https://jabarlew.github.io/udacity-memory-game-project/index.html">Preview</a>
