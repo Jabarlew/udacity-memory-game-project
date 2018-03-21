@@ -4,17 +4,17 @@ Simple game I remmember from my childchood. Sixteen cards with animal graphic on
 
 <a href="https://jabarlew.github.io/udacity-memory-game-project/index.html">Preview</a>
 
-##How to
+## How to
 You need to match cards ( yea thats is) faster = better
 
-##Instructions
+## Instructions
 
-1. Load the game 
-2. Click on the card
-3. Find matching cards
++ Load the game 
++ Click on the card
++ Find matching cards
 
 
-#HAVE FUN PLAYING !!!
+# HAVE FUN PLAYING !!!
 
 
 
