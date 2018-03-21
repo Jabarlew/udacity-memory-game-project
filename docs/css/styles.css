@@ -162,7 +162,7 @@ li {
 }
 
 .win .image {
-  background-image: url("/img/flat-green.png");
+  background-image: url("img/flat-green.png");
   background-repeat: repeat;
   top: 0;
   left: 0;
