@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         interval = setInterval(tick, 1000);
       }
     }
-
+    // grades player by number of moves
     function grade() {
       const starOne = document.querySelector('.grade-star-one');
       const starTwo = document.querySelector('.grade-star-two');
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         starTwo.classList.add('far');
       }
     }
-
+    // handles reset buttons
     document.querySelector('.reset').addEventListener('click', () => {
       document.location.reload();
     });
