@@ -14,7 +14,7 @@ You need to match cards ( yea thats is) faster = better
 + Find matching cards
 
 
-# HAVE FUN PLAYING !!!
+# HAVE FUN!!!
 
 
 
