@@ -144,8 +144,8 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 40%;
-  width: 40%;
+  height: 60%;
+  width: 60%;
   background-color: white;
   border-radius: 10px;
   box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
@@ -239,8 +239,8 @@ li {
     margin: 0;
   }
   .win .screen .message {
-    height: 60%;
-    width: 60%;
+    height: 80%;
+    width: 80%;
   }
 }
 
@@ -259,9 +259,9 @@ li {
     width: 80px;
     height: 80px;
   }
-.flex-container{
-  flex-direction: column;
-}
+  .flex-container {
+    flex-direction: column;
+  }
   .grade {
     margin: 1rem;
   }
@@ -274,10 +274,6 @@ li {
   .item {
     width: 60px;
     height: 60px;
-  }
-  .win .screen .message {
-    height: 80%;
-    width: 80%;
   }
 }
 
