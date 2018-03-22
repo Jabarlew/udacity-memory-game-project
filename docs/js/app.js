@@ -57,8 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       hide.classList.remove('hide');
       document.body.classList.add('win');
-
-      endText.innerHTML = `You made ${numberOfMoves} moves. Your time is ${hours} h ${minutes} m ${seconds} s `;
+      if (numberOfMoves <= 13) {
+        endText.innerHTML = `You made ${numberOfMoves} moves. Your time is ${hours} h ${minutes} m ${seconds} s. You get 3 stars! `;
+      } if (numberOfMoves >= 14) {
+        endText.innerHTML = `You made ${numberOfMoves} moves. Your time is ${hours} h ${minutes} m ${seconds} s. You get 2 stars! `;
+      } if (numberOfMoves >= 17) {
+        endText.innerHTML = `You made ${numberOfMoves} moves. Your time is ${hours} h ${minutes} m ${seconds} s. You get 1 star! `;
+      }
     }
 
     function matchedCards() {
