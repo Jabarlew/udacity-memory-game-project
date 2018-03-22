@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      if (!timerStarted === true) {
+      if (!timerStarted) {
         hours = 0;
         seconds = 0;
         minutes = 0;
