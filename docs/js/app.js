@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let seconds = 0;
   let interval;
   let numberOfMoves = 0;
+  let timerStarted = false;
   // /array of images
   const availableCardImages = [
     'badger.svg',
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      if (numberOfMoves === 1) {
+      if (!timerStarted === true) {
         hours = 0;
         seconds = 0;
         minutes = 0;
@@ -124,6 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = card.img;
       // adds click event
       card.element.addEventListener('click', () => {
+        if (!timerStarted) {
+          startTimer();
+          timerStarted = true;
+        }
         // cant 2 cards to selectedCards and dont allow to add 2 times the same card
         if (selectedCards.length < 2 && card.element.classList.contains('opened') === false) {
           selectedCards.push(card);
@@ -132,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
           if (selectedCards.length === 2) {
             numberOfMoves += 1;
             grade();
-            startTimer();
             h1moves.innerHTML = numberOfMoves;
             if (selectedCards[0].img === selectedCards[1].img) {
               matchedCards();
